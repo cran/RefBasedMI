@@ -1,8 +1,8 @@
 Package: RefBasedMI
 Title: Reference-Based Imputation for Longitudinal Clinical Trials with
         Protocol Deviation
-Version: 0.1.0
-Author: Kevin McGrath <kkevinmcgrath@yahoo.co.uk>
+Version: 0.1.1
+Author: Kevin McGrath <kkevinmcgrath@yahoo.co.uk>, Ian White <ian.white@ucl.ac.uk>
 Maintainer: Matteo Quartagno <m.quartagno@ucl.ac.uk>
 Description: Imputation of missing numerical outcomes for a longitudinal trial 
     with protocol deviations.
@@ -28,6 +28,6 @@ Imports: data.table, Hmisc, norm2, mice, pastecs, assertthat
 Depends: R (>= 3.5.0)
 RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2023-04-26 09:18:48 UTC; rmjlmqu
+Packaged: 2023-08-21 12:48:51 UTC; rmjlmqu
 Repository: CRAN
-Date/Publication: 2023-04-27 12:42:41 UTC
+Date/Publication: 2023-08-21 13:30:02 UTC

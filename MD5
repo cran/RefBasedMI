@@ -1,4 +1,4 @@
-b243087d9a284eb1a55b2c25e08812b5 *DESCRIPTION
+2ad1b4c93f97813ab58486db4fb384f2 *DESCRIPTION
 b018dc5a4e5353d2ccb403c7ec43ac51 *NAMESPACE
 324f29df7cfb1f8502bec270244e8598 *R/RefBasedMI_comparison.R
 abb167f7d26ec897f019ac67628b4bb0 *R/Runmimix.R
@@ -8,14 +8,13 @@ e63202bc82732c61a5f5d9eb1f6ca8e6 *R/proprocess.R
 2c550b4607dca170c0b198b851262fd4 *data/acupuncture.RData
 68536cd96614e01bf5ff9698ba9a2f66 *data/antidepressant.RData
 e8591fda098a8f948165932d8998d0e3 *data/asthma.RData
-71cae0710bec4082e183cd9a0874ea32 *inst/doc/RefBasedMI_0.0.15.pdf
-782a4e34a035d36898619fffed1f9eb7 *inst/doc/RefBasedMI_0.0.18.pdf
-c3827fc26aa2bd17adf12e5350ac693f *inst/doc/RefBasedMI_0.0.20.pdf
-acd1d3b33159595622feac21b4075ef9 *inst/doc/RefBasedMI_0.0.22.pdf
+97cb17fc5b1be1781377d0b92f7c984d *inst/doc/RefBasedMI_0.0.15.pdf
+87fed5f2f3f4f795ca92c7c0d515d985 *inst/doc/RefBasedMI_0.0.18.pdf
+f9761570b98da24e163e270c24764401 *inst/doc/RefBasedMI_0.0.20.pdf
+a0e981266c8bd16f59810571f2994f09 *inst/doc/RefBasedMI_0.0.22.pdf
 c81922f91bd5d3dc2618c91767ea490f *inst/extdata/SASantidepmethodvar.csv
 afc13acd9b1aed6ee2c1d85699e180bd *inst/extdata/asthma.csv
 d4f8fc9b9bc02d6429d1ff68d94a265e *man/RefBasedMI.Rd
-d645be0328e096d31c8848e29f253546 *man/RefBasedMI_comparison.Rd
 a204072a31aab5f8944cb8dc0d03df58 *man/acupuncture.Rd
 9606546aa75da62444b322a13c862364 *man/antidepressant.Rd
 118e7d665ecce722c685962cc9d40ad4 *man/asthma.Rd
