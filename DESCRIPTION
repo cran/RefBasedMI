@@ -1,9 +1,15 @@
 Package: RefBasedMI
 Title: Reference-Based Imputation for Longitudinal Clinical Trials with
         Protocol Deviation
-Version: 0.1.1
-Author: Kevin McGrath <kkevinmcgrath@yahoo.co.uk>, Ian White <ian.white@ucl.ac.uk>
-Maintainer: Matteo Quartagno <m.quartagno@ucl.ac.uk>
+Version: 0.2.0
+Authors@R: c(person(given = "Kevin",
+                      family = "McGrath",
+                      role = "aut",
+                      email = "kkevinmcgrath@yahoo.co.uk"),
+               person(given = "Matteo",
+                      family = "Quartagno",
+                      role = "cre",
+                      email = "m.quartagno@ucl.ac.uk"))
 Description: Imputation of missing numerical outcomes for a longitudinal trial 
     with protocol deviations.
     The package uses distinct treatment arm-based assumptions for the unobserved data, following 
@@ -11,7 +17,7 @@ Description: Imputation of missing numerical outcomes for a longitudinal trial
     of White, Royes and Best (2020) <doi:10.1080/10543406.2019.1684308>.
     Sensitivity analyses to departures from these assumptions can be done by the 
     Delta method of Roger.
-    The program is derived from the 'mimix' 'Stata' package written by Suzie Cro, 
+    The program uses the same algorithm as the 'mimix' 'Stata' package written by Suzie Cro, 
     with additional coding for the causal model and delta method.
     The reference-based methods are jump to reference (J2R), 
     copy increments in reference (CIR), copy reference (CR),
@@ -23,11 +29,14 @@ Description: Imputation of missing numerical outcomes for a longitudinal trial
 URL: https://github.com/UCL/RefBasedMI
 License: GPL-3
 Encoding: UTF-8
-LazyData: yes
-Imports: data.table, Hmisc, norm2, mice, pastecs, assertthat
+LazyData: true
+Imports: data.table, Hmisc, mice, pastecs, assertthat
 Depends: R (>= 3.5.0)
+NeedsCompilation: yes
 RoxygenNote: 7.2.3
-NeedsCompilation: no
-Packaged: 2023-08-21 12:48:51 UTC; rmjlmqu
+Packaged: 2024-09-04 10:17:04 UTC; rmjlmqu
+Author: Kevin McGrath [aut],
+  Matteo Quartagno [cre]
+Maintainer: Matteo Quartagno <m.quartagno@ucl.ac.uk>
 Repository: CRAN
-Date/Publication: 2023-08-21 13:30:02 UTC
+Date/Publication: 2024-09-09 09:10:01 UTC

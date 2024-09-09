@@ -160,7 +160,7 @@ RefBasedMI<- function(data,covar=NULL,depvar,treatvar,idvar,timevar,method=NULL,
 
   testinterim<-1
   if (!inherits(mle, "logical") & mle !=0 & mle !=1 ) { stop("mle must be logical value") }
-
+  
   if  (!any((class(get("data"))) == "data.frame")) {stop("data must be type dataframe")}
 
   # to put quotes in method
@@ -372,14 +372,13 @@ RefBasedMI<- function(data,covar=NULL,depvar,treatvar,idvar,timevar,method=NULL,
       if (mle==FALSE) {
         # WARN if not enough data
 
-        # warning("If not sufficient data then norm2 error- Cannot estimate variance; fewer than 2 cases")
-        # doesn't suppress msgs capture_condition(emResultT<-(norm2::emNorm(prnormobj,prior = priorvar[1],prior.df=priorvar[2])) )
+        # doesn't suppress msgs capture_condition(emResultT<-(emNorm(prnormobj,prior = priorvar[1],prior.df=priorvar[2])) )
         # if error then want to print otherwise dont show
 
-        invisible(capture.output(emResultT<-(norm2::emNorm(prnormobj,prior = prior[1],prior.df=prior[2])) ))
+        invisible(capture.output(emResultT<-(emNorm(prnormobj,prior = prior[1],prior.df=prior[2])) ))
 
         # now test whether emResult created - if not need to see the error msg
-        if (is.null(emResultT)) {emResultT<-(norm2::emNorm(prnormobj,prior = prior[1],prior.df=prior[2])) }
+        if (is.null(emResultT)) {emResultT<-(emNorm(prnormobj,prior = prior[1],prior.df=prior[2])) }
 
         if (length(grep("negative definite",emResultT$msg ))>0) {
           message((emResultT$msg))
@@ -387,7 +386,7 @@ RefBasedMI<- function(data,covar=NULL,depvar,treatvar,idvar,timevar,method=NULL,
           # UNDECLARED()
         }
         mcmcResultT <- (
-            norm2::mcmcNorm(
+            mcmcNorm(
               emResultT,
               iter = burnin,
               multicycle = bbetween,
@@ -401,7 +400,7 @@ RefBasedMI<- function(data,covar=NULL,depvar,treatvar,idvar,timevar,method=NULL,
       else {
         invisible(capture.output(emResultT <-
                                    (
-                                     norm2::emNorm(prnormobj, prior = prior[1], prior.df = prior[2])
+                                     emNorm(prnormobj, prior = prior[1], prior.df = prior[2])
                                    )))
         # for mle
         mcmcResultT <- emResultT
@@ -564,7 +563,7 @@ RefBasedMI<- function(data,covar=NULL,depvar,treatvar,idvar,timevar,method=NULL,
                     if (length(c_mata_nonmiss[c(which( c_mata_nonmiss <=   (length(mata_means) - length(covar) )     ))]) != 0 )
                       {
                         if ( (length(c_mata_nonmiss)!=0) & (c_mata_miss[b-1]+1 == c_mata_miss[b]) & ( c_mata_miss[b-1] < max(c_mata_nonmiss_nocov)))   
-                          #{message("tf")}
+                          #{print("tf")}
                           { 
                             interim<-1 
                           } #need to include outside the for loop  when condition b=miss_count
